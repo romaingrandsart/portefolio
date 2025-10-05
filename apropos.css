@@ -1,0 +1,223 @@
+/* À propos Section */
+.apropos-section {
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  min-height: 90vh;
+}
+
+.apropos-section .container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.apropos-section .section-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  color: #003C79;
+  text-align: center;
+  margin-bottom: 3rem;
+  font-weight: 700;
+}
+
+/* Contenu À propos */
+.apropos-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* Texte d'introduction */
+.apropos-text {
+  background: #ffffff;
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 5px 30px rgba(0, 60, 121, 0.1);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.apropos-text::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #003C79, #00AEF0);
+}
+
+.intro-text {
+  font-size: 1.3rem;
+  line-height: 2;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.intro-text:last-child {
+  margin-bottom: 0;
+}
+
+/* Cartes d'informations */
+.apropos-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.info-card {
+  background: #ffffff;
+  padding: 2.5rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  text-align: center;
+  border: 2px solid transparent;
+}
+
+.info-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 174, 240, 0.2);
+  border-color: #00AEF0;
+}
+
+.card-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #003C79, #00AEF0);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.info-card:hover .card-icon {
+  transform: rotate(360deg) scale(1.1);
+}
+
+.card-icon svg {
+  color: #ffffff;
+}
+
+.info-card h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  color: #003C79;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.info-card ul {
+  list-style: none;
+  text-align: left;
+  padding: 0;
+}
+
+.info-card ul li {
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.5rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+  color: #555;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  padding-left: 2.5rem;
+}
+
+.info-card ul li::before {
+  content: '→';
+  position: absolute;
+  left: 1rem;
+  color: #00AEF0;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.info-card ul li:hover {
+  background: #e3f2fd;
+  transform: translateX(5px);
+  color: #003C79;
+}
+
+.info-card ul li:hover::before {
+  color: #003C79;
+}
+
+.info-card ul li strong {
+  color: #003C79;
+  font-weight: 600;
+}
+
+/* CTA Section */
+.cta-section {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.cta-text {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.cta-button-apropos {
+  display: inline-block;
+  padding: 1.2rem 3rem;
+  background: linear-gradient(135deg, #003C79, #00AEF0);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 174, 240, 0.4);
+  font-size: 1.1rem;
+}
+
+.cta-button-apropos:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 174, 240, 0.6);
+  background: linear-gradient(135deg, #00AEF0, #003C79);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .apropos-section {
+    padding: 3rem 1rem;
+  }
+
+  .apropos-section .section-title {
+    font-size: 2rem;
+  }
+
+  .apropos-text {
+    padding: 2rem;
+  }
+
+  .intro-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+
+  .apropos-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .info-card {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-text {
+    font-size: 1rem;
+  }
+
+  .cta-button-apropos {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+}

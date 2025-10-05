@@ -1,0 +1,216 @@
+/* Expériences Section */
+.experiences-section {
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+}
+
+.experiences-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.experiences-section .section-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  color: #003C79;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.experiences-section .section-subtitle {
+  text-align: center;
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 4rem;
+}
+
+/* Grille de choix */
+.experiences-choice {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Carte de choix */
+.experience-choice-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 3rem 2.5rem;
+  text-align: center;
+  transition: all 0.4s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 3px solid transparent;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  overflow: hidden;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.experience-choice-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  transition: height 0.4s ease;
+}
+
+.experience-choice-card.pro::before {
+  background: linear-gradient(90deg, #003C79, #00AEF0);
+}
+
+.experience-choice-card.perso::before {
+  background: linear-gradient(90deg, #7b1fa2, #9c27b0);
+}
+
+.experience-choice-card:hover {
+  transform: translateY(-15px) scale(1.02);
+  box-shadow: 0 20px 50px rgba(0, 174, 240, 0.3);
+}
+
+.experience-choice-card.pro:hover {
+  border-color: #00AEF0;
+}
+
+.experience-choice-card.perso:hover {
+  border-color: #9c27b0;
+}
+
+.experience-choice-card:hover::before {
+  height: 100%;
+  opacity: 0.05;
+}
+
+/* Icône */
+.card-icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.4s ease;
+}
+
+.experience-choice-card.pro .card-icon {
+  background: linear-gradient(135deg, #003C79, #00AEF0);
+}
+
+.experience-choice-card.perso .card-icon {
+  background: linear-gradient(135deg, #7b1fa2, #9c27b0);
+}
+
+.card-icon svg {
+  color: #ffffff;
+}
+
+.experience-choice-card:hover .card-icon {
+  transform: rotate(360deg) scale(1.1);
+}
+
+/* Texte */
+.experience-choice-card h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+  color: #003C79;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.experience-choice-card.perso h3 {
+  color: #7b1fa2;
+}
+
+.experience-choice-card p {
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+/* Flèche */
+.card-arrow {
+  font-size: 2rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.experience-choice-card.pro .card-arrow {
+  color: #00AEF0;
+}
+
+.experience-choice-card.perso .card-arrow {
+  color: #9c27b0;
+}
+
+.experience-choice-card:hover .card-arrow {
+  transform: translateX(-50%) translateX(10px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .experiences-section {
+    padding: 3rem 1rem;
+  }
+
+  .experiences-section .section-title {
+    font-size: 2rem;
+  }
+
+  .experiences-choice {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .experience-choice-card {
+    min-height: 350px;
+    padding: 2.5rem 2rem;
+  }
+
+  .card-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .card-icon svg {
+    width: 50px;
+    height: 50px;
+  }
+
+  .experience-choice-card h3 {
+    font-size: 1.4rem;
+  }
+
+  .experience-choice-card p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-choice-card {
+    min-height: 300px;
+    padding: 2rem 1.5rem;
+  }
+
+  .experience-choice-card h3 {
+    font-size: 1.2rem;
+  }
+}

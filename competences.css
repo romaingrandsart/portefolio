@@ -1,0 +1,144 @@
+/* Compétences Section */
+.competences-section {
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  min-height: 90vh;
+}
+
+.competences-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.competences-section .section-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  color: #003C79;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.competences-section .section-subtitle {
+  text-align: center;
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 4rem;
+}
+
+/* Catégories de compétences */
+.competences-category {
+  margin-bottom: 4rem;
+}
+
+.category-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  color: #003C79;
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+  border-left: 5px solid #00AEF0;
+  font-weight: 700;
+}
+
+/* Grille des compétences */
+.competences-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 2rem;
+}
+
+/* Carte de compétence */
+.competence-card {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  border: 2px solid transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 180px;
+}
+
+.competence-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 174, 240, 0.3);
+  border-color: #00AEF0;
+}
+
+/* Icône de compétence */
+.competence-icon {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.competence-card:hover .competence-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Texte de compétence */
+.competence-card p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  color: #003C79;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .competences-section {
+    padding: 3rem 1rem;
+  }
+
+  .competences-section .section-title {
+    font-size: 2rem;
+  }
+
+  .category-title {
+    font-size: 1.5rem;
+  }
+
+  .competences-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .competence-card {
+    padding: 1.5rem 1rem;
+    min-height: 150px;
+  }
+
+  .competence-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .competence-card p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .competences-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .competence-card {
+    padding: 1rem;
+    min-height: 130px;
+  }
+
+  .competence-icon {
+    width: 50px;
+    height: 50px;
+  }
+}
